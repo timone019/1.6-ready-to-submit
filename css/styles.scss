@@ -1,15 +1,15 @@
 /*
 Colors used
 FG #5B0179 BG #00A3D7
-Text Color (Black): #040404;
-Primary Color (darkcyan): darkcyan;
-Secondary Color (lightsteelblue): ;
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
  */
 
-:root {
+ :root {
     --primary-color: #357b70;
-    --secondary-color: lightsteelblue;
-    --text-color: #2b2b2b;
+    --secondary-color: #e0b354;
+    --dark-grey: #2b2b2b;
 } 
 
 a {
@@ -165,7 +165,7 @@ button:focus {
 }
 
 .grid__item {
-    background-color: lightsteelblue;
+    background-color: lightgray;
     width: auto;
     min-height: auto;
     margin: 0;
@@ -285,25 +285,4 @@ button:focus,
 
 .cloud-back {
     animation: 10s cloud-move-reverse infinite alternate linear;
-}
-
-.social-media {
-   justify-content: center;
-   align-items: center;
-   display:flex;
-   padding-top:20%;
-    }
-
-img {
-    transition: transform .2s;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid black;
-
-}    
-
-img:hover{
-    transform:scale(2.5); 
 }
