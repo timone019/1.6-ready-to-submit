@@ -374,3 +374,29 @@ button:focus,
  img:hover{
      transform:scale(1.5); 
  }
+
+ .cursive-text {
+    font-family: cursive; /* Use a cursive font */
+    font-size: 24px; /* Adjust the font size as needed */
+    /* animation: writeText 4s linear infinite; /* Apply the animation */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    /* border-right: 2px solid #333; /* Create a cursor effect */
+    width: 0; /* Initially set width to 0 */
+    animation: drawText 4s steps(40) forwards; /*Apply the animation */
+
+ }
+
+ .animated-text {
+    display: inline-block;
+    /* animation: drawtext 10s linear forwards; /* Apply the animation */
+ }
+
+ @keyframes drawText {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
+ }
