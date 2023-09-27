@@ -12,20 +12,21 @@ Text Color (Black): #040404;
 Primary Color (darkcyan): 
 Secondary Color (lightsteelblue): ;
 Button Text Color (white): ;
+Button Bg Color (#357b70 );
  */
 
- :root {
-    --primary-color: #357b70;
+:root {
+    --primary-color: darkcyan;
     --secondary-color: lightsteelblue;
     --text-color: #2b2b2b;
     --bg-color: #00A3D7;
     --button-text-color: white;
     --secondary-button-color: rgba(218, 112, 214, 0.808);
-    --button-bg-color: darkcyan;
-} 
+    --button-bg-color: #357b7bee ;
+}
 
 a {
-    color: var(--primary-color);
+    color: var(--button-bg-color);
 }
 
 
@@ -37,7 +38,7 @@ body {
     line-height: 1.6;
     /* Sets the line-height to 1.6 */
     background-color: var(--bg-color);
-    color: var(--text-color); 
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -82,8 +83,8 @@ button {
     /*takes the font from the outer container */
     font-family: inherit;
     /*styles the bg color, font color, and text decoration (underline, etc) of the button */
-    background-color: var(--primary-color) ;
-    color: var(--button-text-color) ;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     text-decoration: none;
     /* adds spacing to the button */
     padding: 10px;
@@ -91,7 +92,7 @@ button {
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
     border-bottom: 2px solid rgba(0, 0, 0, .3);
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 
 }
 
@@ -105,11 +106,11 @@ button:focus {
 
 .button__secondary,
 .button__secondary:active::before {
-    content: "Please reconsider your ";
-    background-color: var(--secondary-button-color) ;
-    color: var(--text-color) ;
+    content: "You miss-clicked it's the one to the left :)";
+    background-color: var(--secondary-button-color);
+    color: var(--text-color);
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 
 }
 
@@ -135,8 +136,8 @@ button:focus {
     margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -152,21 +153,21 @@ button:focus {
     display: flex;
     width: 100%;
     padding: 20px;
-    background: var(--secondary-color) ;
+    background: var(--secondary-color);
     border-bottom: 2px solid black;
-    
+
 }
 
 .page-header__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 100px;
-            flex: 0 1 100px;
+    -ms-flex: 0 1 100px;
+    flex: 0 1 100px;
 }
 
 .page-header__item:last-child {
     -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     text-align: right;
 }
 
@@ -199,7 +200,7 @@ button:focus {
 }
 
 .grid__item {
-    background-color: var(--secondary-color) ;
+    background-color: var(--secondary-color);
     width: auto;
     min-height: auto;
     margin: 0;
@@ -212,11 +213,22 @@ button:focus {
 
 * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .ul {
     list-style-type: none;
+}
+
+ table, th, td {
+    border: 1px solid var(--text-color)
+    border-collapse: collapse; 
+    padding: 5px; 
+    text-align: var(--textCenter) 
+} 
+
+.table-about-me {
+    margin: 0 auto;
 }
 
 
@@ -263,8 +275,8 @@ button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the button */
-    background-color: var(--button-bg-color) ;
-    color: var(--button-text-color) ;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
@@ -289,9 +301,11 @@ button:focus,
     0% {
         fill: #edc655;
     }
+
     50% {
         fill: #cffadc;
     }
+
     100% {
         fill: #f76414;
     }
@@ -301,9 +315,11 @@ button:focus,
     0% {
         fill: #edc655;
     }
+
     50% {
         fill: #cffadc;
     }
+
     100% {
         fill: #f76414;
     }
@@ -311,105 +327,120 @@ button:focus,
 
 .sun {
     -webkit-animation: 3s color-change infinite alternate linear;
-            animation: 3s color-change infinite alternate linear;
+    animation: 3s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
     from {
         -webkit-transform: translate(0. 50px);
-                transform: translate(0. 50px);
+        transform: translate(0. 50px);
     }
-    to {-webkit-transform: translate(200px, 50px);transform: translate(200px, 50px);
+
+    to {
+        -webkit-transform: translate(200px, 50px);
+        transform: translate(200px, 50px);
     }
 }
 
 @keyframes cloud-move {
     from {
         -webkit-transform: translate(0. 50px);
-                transform: translate(0. 50px);
+        transform: translate(0. 50px);
     }
-    to {-webkit-transform: translate(200px, 50px);transform: translate(200px, 50px);
+
+    to {
+        -webkit-transform: translate(200px, 50px);
+        transform: translate(200px, 50px);
     }
 }
 
 .cloud-front {
     -webkit-animation: 10s cloud-move infinite alternate linear;
-            animation: 10s cloud-move infinite alternate linear;
+    animation: 10s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
     from {
         -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
     }
+
     to {
         -webkit-transform: translate(100px, 48px);
-                transform: translate(100px, 48px);
+        transform: translate(100px, 48px);
     }
 }
 
 @keyframes cloud-move-reverse {
     from {
         -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
     }
+
     to {
         -webkit-transform: translate(100px, 48px);
-                transform: translate(100px, 48px);
+        transform: translate(100px, 48px);
     }
 }
 
 .cloud-back {
     -webkit-animation: 10s cloud-move-reverse infinite alternate linear;
-            animation: 10s cloud-move-reverse infinite alternate linear;
+    animation: 10s cloud-move-reverse infinite alternate linear;
 }
 
 .social-media {
     justify-content: center;
     align-items: center;
-    display:flex;
-    padding-top:20%;
-     }
- 
- img {
-     transition: transform .2s;
-     width: 50px;
-     height: 50px;
-     margin: 0 auto;
-     border-radius: 10px;
-     border: 1px solid black;   
- }    
- 
- img:hover{
-     transform:scale(1.5); 
- }
+    display: flex;
+    padding-top: 20%;
+}
 
- .cursive-text {
-    font-family: cursive; /* Use a cursive font */
-    font-size: 24px; /* Adjust the font size as needed */
+img {
+    transition: transform .2s;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+img:hover {
+    transform: scale(1.5);
+}
+
+.cursive-text {
+    font-family: cursive;
+    /* Use a cursive font */
+    font-size: 24px;
+    /* Adjust the font size as needed */
     /* animation: writeText 4s linear infinite; /* Apply the animation */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflowing text */
     /* border-right: 2px solid #333; /* Create a cursor effect */
-    width: 0; /* Initially set width to 0 */
-    animation: drawText 4s steps(40) forwards; /*Apply the animation */
+    width: 0;
+    /* Initially set width to 0 */
+    animation: drawText 4s steps(40) forwards;
+    /*Apply the animation */
 
- }
+}
 
- .animated-text {
+.animated-text {
     display: inline-block;
     /* animation: drawtext 10s linear forwards; /* Apply the animation */
- }
+}
 
- @keyframes drawText {
+@keyframes drawText {
     0% {
         width: 0;
     }
+
     100% {
         width: 25%;
     }
- }
+}
 
- .text-button:active::before {
+.text-button:active::before {
     content: "You are Awesome! ";
- }
+}
