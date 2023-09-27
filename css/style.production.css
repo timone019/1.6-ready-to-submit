@@ -397,6 +397,6 @@ button:focus,
         width: 0;
     }
     100% {
-        width: 50%;
+        width: 25%;
     }
  }
