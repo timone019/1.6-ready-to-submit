@@ -81,30 +81,32 @@
 
             <div class="profile">
                 <form action="" method="post" id="contact-form">
-                    <label class="standard-label" for="contact-email">E-mail: </label>
-                    <input type="email" id="contact-email" required>
-    
-                    <label class="standard-label" for="contact-tel">Telephone: </label>
-                    <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                    <input placeholder="Name" type="text" tabindex="1" required autofocus>
+                    <br> 
+                    <input placeholder="Email" type="email" id="contact-email" tabindex="2" required>
                     <br>
-                    <label for="contact-message" class="standard-label">Message: </label>
-                    <textarea id="contact-message" maxlength="240" required></textarea>
-                    <input type="submit" value="Send Message">
+                    <input placeholder="Telephone" type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" tabindex="3" required>
+                    <br>
+                    <textarea placeholder="Type Message" id="contact-message" tabindex="5" maxlength="240" required></textarea>
+                    <br>
+                    <input type="submit" value="Send" id="contact-form-submit" data-submit="....Sent!">
                 </form>
             </div>
             
         </h3>
-        CareerFoundry GmbH<br>
-        c/o SM Productions<br>
-        425 SM St<br>
-        SM City<br>
-
-
+        Sam My <br>
+        SM Productions<br>
+        Seattle Area <br>
+        
 
         <br>
         <a href="tel:+1 425 563 5201">Call me<img src="./img/phoneicon.svg" alt="phone"></a><br>
         <a href="mailto:sam.my@nafinc.com">Email me<img src="./img/emailicon.svg" alt="email"></a><br>
-     </div>
+     
+    </div>
+    <br>
+
+    <a href="#"> Back To The Top </a> 
     </footer>
 
     <script src="./js/tota11y.min.js"></script>

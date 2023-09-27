@@ -8,20 +8,26 @@
 /*
 Colors used
 FG #5B0179 BG #00A3D7
-Text Color (Dark Gray): #2b2b2b;
-Primary Color (Purple): #357b70;
-Secondary Color (Orange): #e0b354;
+Text Color (Black): #040404;
+Primary Color (darkcyan): 
+Secondary Color (lightsteelblue): ;
+Button Text Color (white): ;
  */
 
  :root {
     --primary-color: #357b70;
-    --secondary-color: #e0b354;
-    --dark-grey: #2b2b2b;
+    --secondary-color: lightsteelblue;
+    --text-color: #2b2b2b;
+    --bg-color: #00A3D7;
+    --button-text-color: white;
+    --secondary-button-color: rgba(218, 112, 214, 0.808);
+    --button-bg-color: darkcyan;
 } 
 
 a {
     color: var(--primary-color);
 }
+
 
 body {
     font-family: 'Lato', sans-serif;
@@ -30,8 +36,8 @@ body {
     /* Sets the font size to 16 px */
     line-height: 1.6;
     /* Sets the line-height to 1.6 */
-    background-color: #00A3D7;
-    color: #040404;
+    background-color: var(--bg-color);
+    color: var(--text-color); 
     text-align: center;
 }
 
@@ -51,12 +57,12 @@ h3 {
 }
 
 a {
-    color: black;
+    color: var(--text-color);
 }
 
 a:visited {
     /* visited link */
-    color: black;
+    color: var(--text-color);
 }
 
 a:hover,
@@ -76,8 +82,8 @@ button {
     /*takes the font from the outer container */
     font-family: inherit;
     /*styles the bg color, font color, and text decoration (underline, etc) of the button */
-    background-color: darkcyan;
-    color: white;
+    background-color: var(--primary-color) ;
+    color: var(--button-text-color) ;
     text-decoration: none;
     /* adds spacing to the button */
     padding: 10px;
@@ -97,11 +103,14 @@ button:focus {
     opacity: 0.8;
 }
 
-.button__secondary {
-    background-color: rgba(218, 112, 214, 0.808);
-    color: #2b2b2b;
+.button__secondary,
+.button__secondary:active::before {
+    content: "Please reconsider your ";
+    background-color: var(--secondary-button-color) ;
+    color: var(--text-color) ;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+
 }
 
 .navigation-list__item--active {
@@ -143,7 +152,7 @@ button:focus {
     display: flex;
     width: 100%;
     padding: 20px;
-    background: lightsteelblue;
+    background: var(--secondary-color) ;
     border-bottom: 2px solid black;
     
 }
@@ -190,7 +199,7 @@ button:focus {
 }
 
 .grid__item {
-    background-color: lightsteelblue;
+    background-color: var(--secondary-color) ;
     width: auto;
     min-height: auto;
     margin: 0;
@@ -254,8 +263,8 @@ button {
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the button */
-    background-color: #357b70;
-    color: white;
+    background-color: var(--button-bg-color) ;
+    color: var(--button-text-color) ;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
@@ -272,7 +281,7 @@ button:focus,
 .button:focus {
     /* lets the mouse appear as a hand when hovering over button */
     cursor: pointer;
-    /* reduces the opacity of teh button to 80% */
+    /* reduces the opacity of the button to 80% */
     opacity: 0.8;
 }
 
@@ -399,4 +408,8 @@ button:focus,
     100% {
         width: 25%;
     }
+ }
+
+ .text-button:active::before {
+    content: "You are Awesome! ";
  }

@@ -89,7 +89,9 @@ button:focus {
     opacity: 0.8;
 }
 
-.button__secondary {
+.button__secondary,
+.button__secondary:active::before  {
+    content: "Please reconsider your ";
     background-color: rgba(218, 112, 214, 0.808);
     color: #2b2b2b;
     box-sizing: border-box;
@@ -242,7 +244,7 @@ button:focus,
 .button:focus {
     /* lets the mouse appear as a hand when hovering over button */
     cursor: pointer;
-    /* reduces the opacity of teh button to 80% */
+    /* reduces the opacity of the button to 80% */
     opacity: 0.8;
 }
 
@@ -332,4 +334,8 @@ img:hover{
     100% {
         width: 50%;
     }
+ }
+
+ .text-button:active::before {
+    content: "You are Awesome! ";
  }
