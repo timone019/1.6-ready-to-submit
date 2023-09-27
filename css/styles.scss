@@ -6,11 +6,11 @@ Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
 
- :root {
+:root {
     --primary-color: #357b70;
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
-} 
+}
 
 a {
     color: var(--primary-color);
@@ -129,7 +129,7 @@ button:focus {
     padding: 20px;
     background: lightsteelblue;
     border-bottom: 2px solid black;
-    
+
 }
 
 .page-header__item {
@@ -250,9 +250,11 @@ button:focus,
     0% {
         fill: #edc655;
     }
+
     50% {
         fill: #cffadc;
     }
+
     100% {
         fill: #f76414;
     }
@@ -266,7 +268,9 @@ button:focus,
     from {
         transform: translate(0. 50px);
     }
-    to {transform: translate(200px, 50px);
+
+    to {
+        transform: translate(200px, 50px);
     }
 }
 
@@ -278,6 +282,7 @@ button:focus,
     from {
         transform: translate(446px, 48px);
     }
+
     to {
         transform: translate(100px, 48px);
     }

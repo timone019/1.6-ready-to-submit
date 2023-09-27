@@ -10,7 +10,7 @@ Secondary Color (lightsteelblue): ;
     --primary-color: #357b70;
     --secondary-color: lightsteelblue;
     --text-color: #2b2b2b;
-} 
+}
 
 a {
     color: var(--primary-color);
@@ -90,7 +90,7 @@ button:focus {
 }
 
 .button__secondary,
-.button__secondary:active::before  {
+.button__secondary:active::before {
     content: "Please reconsider your ";
     background-color: rgba(218, 112, 214, 0.808);
     color: #2b2b2b;
@@ -131,7 +131,7 @@ button:focus {
     padding: 20px;
     background: lightsteelblue;
     border-bottom: 2px solid black;
-    
+
 }
 
 .page-header__item {
@@ -252,9 +252,11 @@ button:focus,
     0% {
         fill: #edc655;
     }
+
     50% {
         fill: #cffadc;
     }
+
     100% {
         fill: #f76414;
     }
@@ -268,7 +270,9 @@ button:focus,
     from {
         transform: translate(0. 50px);
     }
-    to {transform: translate(200px, 50px);
+
+    to {
+        transform: translate(200px, 50px);
     }
 }
 
@@ -280,6 +284,7 @@ button:focus,
     from {
         transform: translate(446px, 48px);
     }
+
     to {
         transform: translate(100px, 48px);
     }
@@ -290,11 +295,11 @@ button:focus,
 }
 
 .social-media {
-   justify-content: center;
-   align-items: center;
-   display:flex;
-   padding-top:20%;
-    }
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20%;
+}
 
 img {
     transition: transform .2s;
@@ -304,38 +309,45 @@ img {
     border-radius: 10px;
     border: 1px solid black;
 
-}    
+}
 
-img:hover{
-    transform:scale(2.5); 
+img:hover {
+    transform: scale(2.5);
 }
 
 .cursive-text {
-    font-family: cursive; /* Use a cursive font */
-    font-size: 24px; /* Adjust the font size as needed */
+    font-family: cursive;
+    /* Use a cursive font */
+    font-size: 24px;
+    /* Adjust the font size as needed */
     /* animation: writeText 4s linear infinite; /* Apply the animation */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflowing text */
     /* border-right: 2px solid #333; /* Create a cursor effect */
-    width: 0; /* Initially set width to 0 */
-    animation: drawText 4s steps(40) forwards; /*Apply the animation */
+    width: 0;
+    /* Initially set width to 0 */
+    animation: drawText 4s steps(40) forwards;
+    /*Apply the animation */
 
- }
+}
 
- .animated-text {
+.animated-text {
     display: inline-block;
     /* animation: drawtext 10s linear forwards; /* Apply the animation */
- }
+}
 
- @keyframes drawText {
+@keyframes drawText {
     0% {
         width: 0;
     }
+
     100% {
         width: 50%;
     }
- }
+}
 
- .text-button:active::before {
+.text-button:active::before {
     content: "You are Awesome! ";
- }
+}
