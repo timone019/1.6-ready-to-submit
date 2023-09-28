@@ -22,7 +22,7 @@ Button Bg Color (#357b70 );
     --bg-color: #00A3D7;
     --button-text-color: white;
     --secondary-button-color: rgba(218, 112, 214, 0.808);
-    --button-bg-color: #357b7bee ;
+    --button-bg-color: #357b7bee;
 }
 
 a {
@@ -171,6 +171,7 @@ button:focus {
     text-align: right;
 }
 
+
 .navigation-list {
     list-style-type: none;
 }
@@ -216,16 +217,18 @@ button:focus {
     box-sizing: border-box;
 }
 
-.ul {
+.about-list__item {
     list-style-type: none;
 }
 
- table, th, td {
-    border: 1px solid var(--text-color)
-    border-collapse: collapse; 
-    padding: 5px; 
-    text-align: var(--textCenter) 
-} 
+table,
+th,
+td {
+    border: 1px solid var(--text-color);
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: var(--textCenter)
+}
 
 .table-about-me {
     margin: 0 auto;
