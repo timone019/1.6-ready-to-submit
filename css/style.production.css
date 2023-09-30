@@ -96,14 +96,6 @@ button {
 
 }
 
-button:hover,
-button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-}
-
 .button__secondary,
 .button__secondary:active::before {
     content: "You miss-clicked it's the one to the left :)";
@@ -147,6 +139,27 @@ button:focus {
     text-align: none;
 }
 
+.main-about {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.main-about:hover {
+    opacity: 0.7;
+    border: solid;
+
+}
+
 .page-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -179,6 +192,21 @@ button:focus {
 .navigation-list li {
     display: inline-block;
     margin-left: 15px;
+}
+
+.navigation-list__item {
+    display: block;
+    text-decoration: none
+}
+
+.navigation-list li:hover {
+    border: 2px solid;
+
+}
+
+.navigation-list li:focus {
+    border: 2px solid;
+
 }
 
 .grid {
@@ -298,6 +326,8 @@ button:focus,
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
+    border: solid;
+
 }
 
 @-webkit-keyframes color-change {
@@ -409,6 +439,8 @@ img {
 
 img:hover {
     transform: scale(1.5);
+
+
 }
 
 .cursive-text {
