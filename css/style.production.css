@@ -187,6 +187,7 @@ button {
 
 .navigation-list {
     list-style-type: none;
+
 }
 
 .navigation-list li {
@@ -199,15 +200,12 @@ button {
     text-decoration: none
 }
 
-.navigation-list li:hover {
-    border: 2px solid;
-
-}
-
+.navigation-list li:hover,
 .navigation-list li:focus {
-    border: 2px solid;
-
+    border-bottom: 2px solid;
 }
+
+
 
 .grid {
     display: -ms-grid;
