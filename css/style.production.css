@@ -21,7 +21,11 @@ Button Bg Color (#357b70 );
     --text-color: #2b2b2b;
     --bg-color: #00A3D7;
     --button-text-color: white;
-    --secondary-button-color: rgba(218, 112, 214, 0.808);
+    --button-color: linear-gradient(
+        325deg,
+        #357b7b 0%,
+        #2b6464 55%,
+        #357b7b 90%);
     --button-bg-color: #357b7bee;
 }
 
@@ -77,34 +81,7 @@ a:active {
     color: #489c79;
 }
 
-button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    /*takes the font from the outer container */
-    font-family: inherit;
-    /*styles the bg color, font color, and text decoration (underline, etc) of the button */
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    text-decoration: none;
-    /* adds spacing to the button */
-    padding: 10px;
-    border-radius: 3px;
-    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-    border-bottom: 2px solid rgba(0, 0, 0, .3);
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
 
-}
-
-.button__secondary,
-.button__secondary:active::before {
-    content: "You miss-clicked it's the one to the left :)";
-    background-color: var(--secondary-button-color);
-    color: var(--text-color);
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-
-}
 
 .navigation-list__item--active {
     text-decoration: none;
@@ -293,39 +270,69 @@ td {
     }
 }
 
+button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /*takes the font from the outer container */
+    font-family: inherit;
+    /*styles the bg color, font color, and text decoration (underline, etc) of the button */
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    /* adds spacing to the button */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 
+}
+
+.button__secondary,
+.button__secondary:active::before {
+    content: "You miss-clicked it's the one to the left :)";
+    background-color: var(--secondary-button-color);
+    color: var(--button-text-color);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
 
 button,
 .button,
 button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
     display: inline-block;
-    /* takes the font from the outer container */
+    cursor: pointer;
     font-family: inherit;
-    /* styles the button */
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    /* width of the border, type color */
-    border-bottom: 2px solid rgba(0. 0. 0. 0. 0.3);
-    -webkit-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
-    transition: opacity 0.2s;
+    text-align: center;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    color: hsla(360 100% 100% / 1);
+    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5),
+      0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+      inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+      inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+    font-weight: bold;
 }
 
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-    /* lets the mouse appear as a hand when hovering over button */
+button:hover {
+    background-position: right top;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+button:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px hsla(360 100% 100% / 1), 0 0 0 6px #357b7b;
     cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-    border: solid;
+} 
 
+.text-button:active::before {
+    content: "You are Awesome! ";
 }
 
 @-webkit-keyframes color-change {
@@ -474,6 +481,8 @@ img:hover {
     }
 }
 
-.text-button:active::before {
-    content: "You are Awesome! ";
-}
+
+
+
+
+
