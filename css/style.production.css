@@ -17,9 +17,8 @@ Button Bg Color (#357b70 );
 
 :root {
     --primary-color: darkcyan;
-    --secondary-color: lightsteelblue;
-    --text-color: #2b2b2b;
-    --bg-color: #00A3D7;
+    --secondary-color: linear-gradient(90deg, #32CD32 0%, #3BB9FF 50%, #00A3D7 100%);
+    --bg-color: linear-gradient(90deg, #00A3D7 0%, #3BB9FF 50%, #32CD32 100%);    
     --button-text-color: white;
     --button-color: linear-gradient(
         325deg,
@@ -29,19 +28,14 @@ Button Bg Color (#357b70 );
     --button-bg-color: #357b7bee;
 }
 
-a {
-    color: var(--button-bg-color);
-}
 
 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    /* Sets the font size to 16 px */
     line-height: 1.6;
-    /* Sets the line-height to 1.6 */
-    background-color: var(--bg-color);
+    background-image: var(--bg-color);
     color: var(--text-color);
     text-align: center;
 }
@@ -63,23 +57,24 @@ h3 {
 
 a {
     color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-a:visited {
+/* a:visited { */
     /* visited link */
-    color: var(--text-color);
-}
+    /* color: var(--text-color);
+} */
 
 a:hover,
 a:focus {
-    /* no underlining when hovering over a link */
-    text-decoration: none;
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
 }
 
 a:active {
     /* selected link */
     color: #489c79;
-}
+} 
 
 
 
@@ -177,10 +172,10 @@ a:active {
     text-decoration: none
 }
 
-.navigation-list li:hover,
+/* .navigation-list li:hover,
 .navigation-list li:focus {
     border-bottom: 2px solid;
-}
+} */
 
 
 
@@ -301,6 +296,7 @@ button {
 
 button,
 .button,
+#contact-form-submit,
 button {
     display: inline-block;
     cursor: pointer;
@@ -310,6 +306,7 @@ button {
     background-size: 280% auto;
     background-image: var(--button-color);
     border: none;
+    text-decoration: none;
     border-radius: 5px;
     color: hsla(360 100% 100% / 1);
     box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5),
@@ -319,9 +316,9 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+button:hover, .button:hover, #contact-form-submit:hover {
     background-position: right top;
-    transform: scale(1.1);
+    transform: scale(1.2);
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
@@ -334,6 +331,7 @@ button:is(:focus, :focus-visible, :active) {
 .text-button:active::before {
     content: "You are Awesome! ";
 }
+
 
 @-webkit-keyframes color-change {
     0% {
