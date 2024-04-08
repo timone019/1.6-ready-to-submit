@@ -17,8 +17,8 @@ Button Bg Color (#357b70 );
 
 :root {
     --primary-color: darkcyan;
-    --secondary-color: linear-gradient(90deg, #32CD32 0%, #3BB9FF 50%, #00A3D7 100%);
-    --bg-color: linear-gradient(90deg, #00A3D7 0%, #3BB9FF 50%, #32CD32 100%);    
+    --secondary-color: linear-gradient(90deg, lightsteelblue 0%, #69c4f2 100%);
+    --bg-color: linear-gradient(90deg, #00A3D7 0%, #75c7f3 100%);    
     --button-text-color: white;
     --button-color: linear-gradient(
         325deg,
@@ -66,10 +66,10 @@ a {
     /* color: var(--text-color);
 } */
 
-a:hover,
+/* a:hover,
 a:focus {
-    text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
-}
+    text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF, 0 0 30px #00BFFF, 0 0 40px #00BFFF;
+} */
 
 a:active {
     /* selected link */
@@ -80,6 +80,13 @@ a:active {
 
 .navigation-list__item--active {
     text-decoration: none;
+}
+
+.navigation-list__item:hover,
+.navigation-list__item:focus {
+    background-color:whitesmoke;
+    border-radius: 4px;
+    transition: color 0.5s ease;
 }
 
 .profile__portrait {
@@ -122,13 +129,12 @@ a:active {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-    border: 1px solid;
     border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-about:hover {
     opacity: 0.7;
-    border: solid;
 
 }
 
@@ -139,7 +145,7 @@ a:active {
     width: 100%;
     padding: 20px;
     background: var(--secondary-color);
-    border-bottom: 2px solid black;
+    border-bottom: none;
 
 }
 
