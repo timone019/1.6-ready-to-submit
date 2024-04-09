@@ -118,6 +118,7 @@ a:active {
     text-align: none;
 }
 
+
 .main-about {
     text-align: center;
     max-width: 90%;
@@ -178,21 +179,29 @@ a:active {
     text-decoration: none
 }
 
-/* .navigation-list li:hover,
-.navigation-list li:focus {
-    border-bottom: 2px solid;
-} */
-
-
-
 .grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 300px 300px; */
     grid-gap: 20px;
     padding: 20px;
+}
+
+
+.grid__item {
+    background-image: var(--secondary-color);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
 }
 
 .grid__item:last-child {
@@ -202,40 +211,6 @@ a:active {
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
 
-}
-
-.grid__item {
-    background-color: var(--secondary-color);
-    width: auto;
-    min-height: auto;
-    margin: 0;
-}
-
-.garage {
-
-    text-align: center;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.about-list__item {
-    list-style-type: none;
-}
-
-table,
-th,
-td {
-    border: 1px solid var(--text-color);
-    border-collapse: collapse;
-    padding: 5px;
-    text-align: var(--textCenter)
-}
-
-.table-about-me {
-    margin: 0 auto;
 }
 
 
@@ -270,6 +245,69 @@ td {
         font-size: 22px;
     }
 }
+
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align project content to the left */
+    width: 100%;
+}
+
+.project-header4 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+
+.garage {
+
+    text-align: center;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.about-list__item {
+    list-style-type: none;
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--text-color);
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: var(--textCenter)
+}
+
+.table-about-me {
+    margin: 0 auto;
+}
+
+
 
 button {
     /* overwrites browser defaults and resets the border */
@@ -484,6 +522,8 @@ img:hover {
         width: 25%;
     }
 }
+
+
 
 
 
