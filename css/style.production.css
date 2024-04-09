@@ -278,7 +278,11 @@ a:active {
     flex-direction: column;
 }
  
-
+.screenshot {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+}
 
 .garage {
 
@@ -486,6 +490,8 @@ img {
 
 img:hover {
     transform: scale(1.5);
+    transition: all 0.3s ease-in-out;
+
 
 
 }
